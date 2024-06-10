@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Navigation Menu -->
+<nav class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" href="#"> <img src="logo.png" id="logoimage"> BKG Tourism  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Book</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Packages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">United States </a>
+          <a class="dropdown-item" href="#">India</a>
+          <a class="dropdown-item" href="#">France</a>
+          <a class="dropdown-item" href="#">Germany</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">Gallery</a>
+      </li>
+    </ul>
+
+     <button class="btn btn-success"  data-toggle="modal" data-target="#RegisterModal"> Register </button> &nbsp;
+    
+     <button class="btn btn-success" data-toggle="modal" data-target="#LoginModal"> Login </button>&nbsp;
+
+
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!-- End of Navigation Menu -->
+
+<!-- hero part -->
+     <div class="jumbotron" id="hero">
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<h1 class="display-3"> Welcome to BKG Tourism </h1>
+	<h2> Visit- <span id="changetext">  </span> </h2>
+	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<button class="btn btn-success"> Book Now </button>
+		</div>
+		<div class="col-md-6">
+			<img src="background.png">
+		</div>
+		</div>
+		</div>
+	</div>
+
+
+<!-- end of hero part -->
+<!-- rating area -->
+
+
+<!--booking area-->
+  <div class="custom-container">
+    <div class="row">
+        <!-- Left Section with Image -->
+        <div class="col-md-6">
+          <img src="petra.png" id="brandimage">
+        </div> 
+        <!-- Right Section with Form -->
+        <div class="col-md-6">
+            <form id="bookingForm">
+                <label for="whereTo">Where to:</label>
+                <select id="whereTo" name="whereTo" class="form-control" required>
+                    <option value="sample1">The great pyramid of giza</option>
+                    <option value="sample2">Machu picchu</option>
+                    <option value="sample3">Taj mahal</option>
+                    <option value="sample4">panama canal</option>
+                    <option value="sample5">The great wall of china</option>
+                    <option value="sample6">Andaman and Nicobar Islands</option>
+                    <!-- Add more options as needed -->
+                </select>
+  
+                <label for="numPersons">How Many Persons:</label>
+                <input type="number" id="numPersons" name="numPersons" class="form-control" required>
+  
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" class="form-control" min="<?= date('Y-m-d') ?>" required>
+  
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" class="form-control" min="<?= date('Y-m-d') ?>" required>
+  
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-control" rows="4" minlength="50" maxlength="500" required></textarea>
+  
+                <button type="submit" class="btn btn-success" id="btn-booknow">Book Now</button>
+            </form>
+        </div>
+    </div>
+  </div>
+ </div>
+
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      // Get the form element by its ID
+      var bookingForm = document.getElementById('bookingForm');
+  
+      // Attach an event listener to the form's submit event
+      bookingForm.addEventListener('submit', function(event) {
+          // Prevent the default form submission
+          event.preventDefault();
+  
+          // Check if all required fields are filled
+          var whereTo = document.getElementById('whereTo').value;
+          var numPersons = document.getElementById('numPersons').value;
+          var startDate = document.getElementById('startDate').value;
+          var endDate = document.getElementById('endDate').value;
+          var description = document.getElementById('description').value;
+  
+          if (whereTo && numPersons>0 && startDate && endDate && description) {
+              // All fields are filled, display the success message
+              alert('Booking successful');
+          } else {
+              // Some fields are empty, display a warning message or take appropriate action
+              alert('Please fill in all required fields.');
+          }
+      });
+   });
+ </script>
+
+ <!-- end of booking area -->
+  
+
+
+
+
+
+
+
+<!-- end of rating area -->
+
+   <!-- Production Section -->
+    <div class="container mt-5" id="product" >
+      <h1 align="center" style="background-color: yellow;"> Packages</h1>
+      <hr class="hr">
+      <h3 align="center">👇👇👇</h3>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="tajmahal.png" class="img-fluid">
+         <h3 align="center"> India </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+         
+         <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="USA.png" class="img-fluid">
+         <h3 align="center"> USA </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="australia.png" class="img-fluid">
+         <h3 align="center"> Australia </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="swizerland.png" class="img-fluid">
+         <h3 align="center"> Swizerland </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+
+
+         </div> <!--<end of first row -->
+          
+          <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="germany.png" class="img-fluid">
+         <h3 align="center"> Germany </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+         
+         <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="greece.png" class="img-fluid">
+         <h3 align="center"> Greece </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="dubai.png" class="img-fluid">
+         <h3 align="center"> Dubai </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+         <img src="china.png" class="img-fluid">
+         <h3 align="center"> China </h3>
+        <h7>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </h7>
+           <div id="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+        </div>
+       <h5> Price: $100</h5>
+       <button class="btn btn-success"> Book Now </button>
+
+        </div>
+        </div>
+        </div>
+
+
+         </div> <!--<end of Second row -->
+
+
+
+
+
+
+        </div>
+
+        <!-- Service Section -->
+    <div class="container" id="Services" >
+      <h1 align="center" style="background-color: yellow;"> Services </h1>
+      <hr class="hr">
+      <h3 align="center">👇👇👇</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+         <img src="transportation.png" class="img-fluid">
+         <h3 align="center"> Transportation facility </h3>
+        <ul>
+                  <li>Convenient travel options for your journey</li>
+                  <li>Airport shuttle service</li>
+                  <li>Rent-a-car service</li>
+                  <li>Local transportation guides</li>
+                </ul>
+        
+
+        </div>
+        </div>
+        </div>
+           
+            <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+         <img src="food and drinks.png" class="img-fluid">
+         <h3 align="center"> Food and Drink </h3>
+       <ul>
+                  <li>Explore delicious cuisines and beverages</li>
+                  <li>Local and international menu options</li>
+                  <li>Vegetarian and vegan-friendly</li>
+                  <li>Happy hour discounts</li>
+                </ul>
+        
+
+        </div>
+        </div>
+        </div>
+
+         <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+         <img src="homestay.png" class="img-fluid">
+         <h3 align="center"> Homestay </h3>
+       <ul>
+                  <li>Find budget-friendly accommodations</li>
+                  <li>Discounted rates</li>
+                  <li>Free breakfast included</li>
+                  <li>Special deals for frequent guests</li>
+                </ul>
+        
+
+        </div>
+        </div>
+        </div>
+
+         <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+         <img src="view piont.png" class="img-fluid">
+         <h3 align="center"> Viewpoint </h3>
+       <ul>
+                  <li>Discover popular tourist spots</li>
+                  <li>Museums, parks, and landmarks</li>
+                  <li>Guided tours available</li>
+                  <li>Discounted tickets</li>
+                </ul>
+        
+
+        </div>
+        </div>
+        </div>
+
+         <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+         <img src="safety.png" class="img-fluid">
+         <h3 align="center"> Safety </h3>
+        <ul>
+                  <li>Stay informed about safety measures</li>
+                  <li>24/7 security surveillance</li>
+                  <li>Emergency contact information</li>
+                  <li>First aid kits available</li>
+                </ul>
+        
+
+        </div>
+        </div>
+        </div>
+              
+              <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+         <img src="customerservice.png" class="img-fluid">
+         <h3 align="center"> Customer Care </h3>
+       <ul>
+                  <li>24/7 assistance available</li>
+                  <li>Live chat support</li>
+                  <li>Phone and email support</li>
+                  <li>Helpdesk for inquiries</li>
+                </ul>
+
+        </div>
+        </div>
+        </div> 
+         </div>
+       </div>
+        
+
+<div class="modal" id="RegisterModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+  <div class="modal-header"> <h5> Register Form </h5> </div>
+  <div class="modal-body"> 
+
+
+         <form>
+          <div class="form-group">
+          <input typle="text" placeholder ="Fullname"  class="form-control">
+             </div>
+
+             <div class="form-group">
+           <input typle="email" placeholder ="Email ID"  class="form-control"   id="email"> <p id="emailtext"> </p>
+              </div>
+              <div class="form-group">
+            <input typle="password" placeholder ="Password"  class="form-control">
+          </div>
+            <div class="form-group">
+             <input typle="contact" placeholder ="Contact No"  class="form-control">
+           </div>
+
+            <div class="form-group">
+              <button type="submit"  class="btn btn-success"> Register </button>
+            </div>
+            <p> Aready have an Account? <a href="#LoginModal" data-toggle="modal" data-dismiss="modal"> Sign In </a>  </p>
+           </form>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal" id="LoginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+  <div class="modal-header"> <h5> Login Form </h5> </div>
+  <div class="modal-body"> 
+
+
+         <form>
+          
+             <div class="form-group">
+           <input typle="email" placeholder ="Email ID"  class="form-control">
+           
+              </div>
+              <div class="form-group">
+            <input typle="password" placeholder ="Password"  class="form-control">
+          </div>
+
+            <div class="form-group">
+              <button type="submit"  class="btn btn-success"> Login </button>
+            </div>
+            <p> Don't Have an Account? <a href="#RegisterModal" data-toggle="modal" data-dismiss="modal"> Sign In </a>  </p>
+           </form>
+
+</div>
+</div>
+</div>
+</div>   <!-- <end of login modal> -->
+
+<script>
+$(document).ready(function(){
+ 
+ $("#email").keyup(function(){
+
+     if (mailcheck())
+     {
+      $("#emailtext").text ("validated")
+     }
+     else
+      {
+      $("#emailtext").text ("Not validated")
+     }
+  
+ })
+
+})
+
+function mailcheck()
+{
+   let maildata= $("#email").val();
+   let mailpattern= /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5})$/;
+
+   if(mailpattern.test(maildata))
+   {
+    return true;
+
+   }
+   else
+  {
+    return false;
+
+   }
+ 
+}
+
+</script>
+
+<div class="container my-5">
+  <h1 class="text-center"  style="padding:25px; background-color:yellow; margin: 0;"> Gallery </h1>
+    <div class="galary-section-container">
+       <div class="container">
+      <img src="file:///C:/Users/vvigi/OneDrive/Desktop/restart%20CP1/images/enjoyment.png1.jpg">
+      <img src="file:///C:/Users/vvigi/OneDrive/Desktop/restart%20CP1/images/enjoyment.png2.jpg">
+      <img src="file:///C:/Users/vvigi/OneDrive/Desktop/restart%20CP1/images/enjoyment.png3.jpeg">
+      <img src="file:///C:/Users/vvigi/OneDrive/Desktop/restart%20CP1/images/enjoyment.png4.jpg">
+      <img src="file:///C:/Users/vvigi/OneDrive/Desktop/restart%20CP1/images/enjoyment.png5.jpeg">
+    </div>
+  </div>
+</div>
+
+
+
+    <h1 class="text-center" style="padding: 25px;font-size: 50px; background-color:yellow; margin: 0;">About</h1>
+
+    <div class="about-container">
+    <div class="right-about-container">
+        
+    <img src="logo.png">
+    </div>
+    <div class="left-about-container"  alt="travel dog image">
+
+      <p>This company is a top choice for travel agencies, focusing on customer satisfaction as our primary goal. We take pride in making our customers happy and ensuring they have the best experience. With many people visiting different places where our services excel, we prioritize creating connections with locals, understanding local climates, and lifestyles. Our commitment to excellence has led to our continuous growth as a company.</p>
+    
+  </div>
+</div>
+</div>
+ 
+
+ <!--FOOTER PART  -->
+
+ <br><br><br><br><br>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h1 class="text-center"> Contact us </h1>
+          <p>Loss Angelous Bara Gali Nagpur Wada London - 8055</p>
+            <p>sgc_agency@Imail.com</p>
+            <p>0111010011</p>
+        </div>
+        <div class="col-md-8">
+          <div class="row" id="outerrow">
+              <div class="social-media-container">
+            <i class="bi bi-facebook" style="color: black; font-size: 40px; margin: 20px;"></i>
+            <i class="bi bi-messenger" style="color: black; font-size: 40px; margin: 20px;"></i>
+            <i class="bi bi-meta" style="color: black; font-size: 40px; margin: 20px;"></i>
+            <i class="bi bi-whatsapp" style="color: black; font-size: 40px; margin: 20px;"></i>
+        </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <p style="color: white; text-align: center; background-color: black; margin-bottom: 0;">©️Copyright jail upto 3 years</p>
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>
